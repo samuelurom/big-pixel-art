@@ -34,7 +34,7 @@ function handleSelectColor() {
 function handleChangeBackground() {
   const movie = movieInput.value;
 
-  fetch(`https://omdb-api-proxy.up.railway.app/movie/?t=${movie}`)
+  fetch(`https://omdb-api-proxy.up.railway.app/movie/${movie}`)
     .then((res) => res.json())
     .then((data) => {
       const poster = data.Poster;
